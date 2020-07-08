@@ -1,0 +1,45 @@
+body {
+  background: url(https://api.xygeng.cn/Bing/);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.time {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  margin-top: 150px;
+}
+
+.bar {
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 35px;
+  position: absolute;
+  bottom: 50px;
+  right: 30em;
+  height: 30px;
+  width: 25em;
+}
+
+.link {
+  width: 16em;
+  height: 30px;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  position: absolute;
+  bottom: 3em;
+  left: 26em;
+  border: none;
+  border-radius: 35px;
+}
+
+.links {
+  margin-left: 5px;
+}
