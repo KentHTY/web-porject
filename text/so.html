@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head></head>
+
+<body>
+
+    <FORM name="f_g1" onsubmit="return(s_1())" class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input onblur="if (value ==''){value=''}" onfocus="this.select()" name="key" type="text"
+                class="form-control" placeholder="Google搜索">
+        </div>
+        <button type="submit" class="btn btn-default" onclick="s_1()">谷歌</button>
+    </form>
+    <FORM name="f_g2" onsubmit="return(s_2())" class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input onblur="if (value ==''){value=''}" onfocus="this.select()" name="key" type="text"
+                class="form-control" placeholder="baidu搜索">
+        </div>
+        <button type="submit" class="btn btn-default" onclick="s_2()">百度</button>
+    </form>
+    <FORM name="f_g3" onsubmit="return(s_3())" class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input onblur="if (value ==''){value=''}" onfocus="this.select()" name="key" type="text"
+                class="form-control" placeholder="sougou搜索">
+        </div>
+        <button type="submit" class="btn btn-default" onclick="s_3()">搜狗</button>
+    </form>
+    <FORM name="f_g5" onsubmit="return(s_5())" class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input onblur="if (value ==''){value=''}" onfocus="this.select()" name="key" type="text"
+                class="form-control" placeholder="Bing搜索">
+        </div>
+        <button type="submit" class="btn btn-default" onclick="s_5()">必应</button>
+    </form>
+
+    <FORM name="f_g4" onsubmit="return(s_4())" class="navbar-form navbar-left" role="search">
+
+        <div class="form-group">
+
+            <input onblur="if (value ==''){value=''}" onfocus="this.select()" name="key" type="text"
+                class="form-control" placeholder="souku搜索">
+
+        </div>
+
+        <button type="submit" class="btn btn-default" onclick="s_4()">优酷</button>
+
+    </form>
+
+    <FORM name="f_g6" onsubmit="return(s_6())" class="navbar-form navbar-left" role="search">
+
+        <div class="form-group">
+
+            <input onblur="if (value ==''){value=''}" onfocus="this.select()" name="key" type="text"
+                class="form-control" placeholder="百度图片搜索">
+
+        </div>
+
+        <button type="submit" class="btn btn-default" onclick="s_6()">图片</button>
+
+    </form>
+
+    <script type="text/javascript">
+        function s_1()
+
+        {
+            window.open("http://www.google.com/search?hl=zh-CN&q=" + encodeURI(f_g1.key.value));
+            return false;
+        };
+
+        function s_2()
+
+        {
+            window.open("http://www.baidu.com/baidu?tn=gg5g&word=" + encodeURI(f_g2.key.value));
+            return false;
+        };
+
+        function s_3()
+
+        {
+            window.open("http://www.sogou.com/web?query=" + encodeURI(f_g3.key.value));
+            return false;
+        };
+
+        function s_4()
+
+        {
+            window.open("http://www.soku.com/v?keyword=" + encodeURI(f_g4.key.value));
+            return false;
+        };
+
+        function s_5()
+
+        {
+            window.open("http://cn.bing.com/search?q=" + encodeURI(f_g5.key.value));
+            return false;
+        };
+
+        function s_6()
+
+        {
+            window.open("http://image.baidu.com/i?ct=201326592&&word=" + encodeURI(f_g6.key.value));
+            return false;
+        };
+    </script>
+
+    <body>
+
+</html>
