@@ -14,13 +14,16 @@
 	<p id="clock" class="time"></p>
 	<!-- 搜索框 -->
 	<div class="search-bar">
-		<form action="https://www.baidu.com/s">
-			<input class="search" type="text" name="wd" placeholder="Search">
+		<form name="search" onsubmit="return(s_5())">
+			<div class="form-group">
+				<input onblur="if (value ==''){value=''}" onfocus="this.select()" name="key" type="text" class="search"
+					placeholder="Search">
+			</div>
 		</form>
 		<!-- 连接部分 -->
 		<div class="link">
-			<a href="https://www.gitee.com" class="links">gitee</a>
-			<a href="https://www.gitee.com" class="links">gitee</a>
+			<a href="https://www.bilibili.com" class="links">bilibili</a>
+			<a href="https://www.github.com" class="links">github</a>
 			<a href="https://www.gitee.com" class="links">gitee</a>
 			<a href="../text/拖拽.html" class="links">拖拽</a>
 			<a href="../text/snake.html" class="links">贪吃蛇</a>
@@ -38,6 +41,11 @@
 				//每隔一秒执行一次
 				setTimeout("clock()", 1000);
 			}
+
+			function s_5() {
+				window.open("http://cn.bing.com/search?q=" + encodeURI(search.key.value));
+				return false;
+			};
 		</script>
 </body>
 
