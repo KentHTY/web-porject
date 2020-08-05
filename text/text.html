@@ -11,12 +11,33 @@
             margin: 0;
             padding: 0;
         }
+
+        #p {
+            font-family: 微软雅黑;
+            display: inline-block;
+        }
+
+        #demo {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            cursor: pointer;
+            font-family: 微软雅黑;
+            display: inline-block;
+            text-align: center;
+            background: rgb(61, 160, 231);
+            line-height: 20px;
+            border-radius: 10px;
+            position: relative;
+            margin-right: 20px;
+        }
     </style>
 </head>
 
 <body>
-    <p id="demo"></p>
-    <button onclick="getToken()" style="width: 120px; height: 60px;">获取Token</button>
+    <p id="p">精神小伙语录：</p>
+    <span id="demo" onclick="sweet();">&nbsp;&nbsp;点我获取精神语录&nbsp;&nbsp;</span>
+
+    <button id="Btn" onclick="sweet()"></button>
     <script>
         function sweet() {
             $.getJSON('https://api.66mz8.com/api/social.php?format=json', function (json) {
