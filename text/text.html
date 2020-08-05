@@ -15,12 +15,12 @@
 </head>
 
 <body>
-    <p id="yulu"></p>
+    <p id="demo"></p>
     <button onclick="getToken()" style="width: 120px; height: 60px;">获取Token</button>
     <script>
-        function getToken() {
-            $.getJSON("https://api.66mz8.com/api/social.php", { "format": json }, function (result) {
-                alert(result.social.php);
+        function sweet() {
+            $.getJSON('https://api.66mz8.com/api/social.php?format=json', function (json) {
+                document.querySelector("#demo").innerHTML = '&nbsp;&nbsp;' + json.social + '&nbsp;&nbsp;';
             });
         }
     </script>
