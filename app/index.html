@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/search.css" />
+    <title>开始</title>
+    <base target="_blank">
+    <title>开始</title>
+</head>
+
+<body onLoad="clock()">
+    <p id="clock" class="time"></p>
+    <!-- 搜索框 -->
+    <div class="search-bar">
+        <form name="search" onsubmit="return(s_5())">
+            <div class="form-group">
+                <input onblur="if (value ==''){value=''}" onfocus="this.select()" name="key" type="text" class="search"
+                    autocomplete="off" placeholder="Search">
+            </div>
+        </form>
+        <!-- 连接部分 -->
+        <div class="link">
+            <a href="https://www.bilibili.com" class="links">bilibili</a>
+            <a href="https://www.github.com" class="links">github</a>
+            <a href="https://www.gitee.com" class="links">gitee</a>
+            <a href="../text/拖拽.html" class="links">拖拽</a>
+            <a href="../text/snake.html" class="links">贪吃蛇</a>
+        </div>
+        <script>
+            function clock() {
+                var d = new Date();
+                var h = d.getHours();
+                var m = d.getMinutes();
+                //如果是单个数，则前面补0
+                h = h < 10 ? "0" + h : h;
+                m = m < 10 ? "0" + m : m;
+                var time = h + ":" + m;
+                document.getElementById("clock").innerHTML = time;
+                //每隔一秒执行一次
+                setTimeout("clock()", 1000);
+            }
+
+            function s_5() {
+                window.open("http://cn.bing.com/search?q=" + encodeURI(search.key.value));
+                return false;
+            };
+        </script>
+</body>
+
+</html>
